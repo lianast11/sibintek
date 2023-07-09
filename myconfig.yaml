@@ -1,0 +1,7 @@
+# Пример конфигурационного файла YAML
+
+database:
+  host: localhost
+  port: 5432
+  username: myuser
+  password: mypassword
