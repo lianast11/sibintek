@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Пример скрипта Bash
-
 echo "Hello, World!"
 
 # Проверка наличия файла

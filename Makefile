@@ -8,14 +8,14 @@ build:
 	docker build -t $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION) -t $(DOCKER_REGISTRY)/$(IMAGE_NAME):latest . 
 	docker run --rm $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION) yamllint myconfig.yaml
 	docker run --rm $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION) shellcheck myscript.sh
-	@echo "Образ успешно собран."
+	@echo "Image successfully built."
 
 deploy:
 	docker login $(DOCKER_REGISTRY)
 	docker push $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION)
 	docker push $(DOCKER_REGISTRY)/$(IMAGE_NAME):latest
-	@echo "Образ успешно загружен в реестр."
+	@echo "Image successfully pushed to the registry."
 
 clean:
 	docker image rm $(DOCKER_REGISTRY)/$(IMAGE_NAME):$(VERSION) $(DOCKER_REGISTRY)/$(IMAGE_NAME):latest
-	@echo "Образы успешно удалены с локального ПК."
+	@echo "The images have been successfully removed from the local machine."

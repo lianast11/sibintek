@@ -1,5 +1,3 @@
-# Пример конфигурационного файла YAML
-
 database:
   host: localhost
   port: 5432
