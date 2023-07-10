@@ -12,4 +12,4 @@ COPY myconfig.yaml myconfig.yaml
 COPY myscript.sh myscript.sh
 
 # Команда по умолчанию при запуске контейнера
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
